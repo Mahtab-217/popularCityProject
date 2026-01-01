@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <div>
     <nav class="py-4 w-full px-10 bg-linear-60 from-black flex items-center justify-between to-green-800 via-red-800">
         <h1 class="text-gray-200 font-3xl font-bold ">شهر های مشهور افغانستان</h1>
-       <a href="#"   class="text-gray-200 bg-green-800 rounded-md py-2 px-4 font-bold" >اضافه کردن شهر مورد نظر</a>
+       <a href="#" id="btn"  class="text-gray-200 bg-green-800 rounded-md py-2 px-4 font-bold" >اضافه کردن شهر مورد نظر</a>
     </nav>
    
-        <div id="form" class="w-full h-screen flex justify-center bg-gray-900/30 items-center ">
+        <div id="form" class="w-full h-screen hidden justify-center bg-gray-900/30 items-center ">
         <div class="w-1/2 p-4 border border-2 h-fit bg-white rounded-md">
             <h1 class="text-3xl font-bold bg-linear-60 from-black py-4 to-green-800 via-red-800 text-center text-transparent bg-clip-text">اضافه کردن شهر جدید</h1>
         <form action="" class="gap-4 flex mx-auto flex-col ">
