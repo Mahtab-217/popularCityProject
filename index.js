@@ -13,8 +13,25 @@ const bookInfo={
    desc: bookDescription
 }
 bookList.push(bookInfo)
+bookName="";
+bookImage="";
+bookDescription="";
   form.classList.remove("flex");
 form.classList.add("hidden"); 
+bookList.forEach(book=>{
+   const div =document.createElement("div");
+   div.classList.add("bookBox");
+  const h1= document.createElement("h1");
+  h1.textContent=book.name;
+  div.appendChild(h1);
+  const p=document.createElement("p");
+  p.textContent= book.desc;
+ div.appendChild(p);
+ const image=document.createElement("img");
+ image.setAttribute("src",book.image);
+ div.appendChild(image);
+ 
+})
 })
 
 btn.addEventListener("click", ()=>{
