@@ -1,23 +1,24 @@
 const form=document.getElementById("form");
 const btn=document.getElementById("btn");
 const addBtn=document.getElementById("addBtn");
+const bookContainer= document.getElementById("bookContainer");
 const bookList=[];
 addBtn.addEventListener("click",(event)=>{
    event.preventDefault;
-const bookName= document.getElementById("name").value;
-const bookImage= document.getElementById("image").value;
-const bookDescription =document.getElementById("description").value;
+const bookName= document.getElementById("name").value
+const bookImage= document.getElementById("image").value
+const bookDescription =document.getElementById("description").value
 const bookInfo={
    name: bookName,
    image: bookImage,
-   desc: bookDescription
+   desc: bookDescription,
 }
-bookList.push(bookInfo)
-bookName="";
-bookImage="";
-bookDescription="";
+bookList.push(bookInfo);
+// bookName="";
+// bookImage="";
+// bookDescription="";
   form.classList.remove("flex");
-form.classList.add("hidden"); 
+form.classList.add(""); 
 bookList.forEach(book=>{
    const div =document.createElement("div");
    div.classList.add("bookBox");
@@ -30,7 +31,7 @@ bookList.forEach(book=>{
  const image=document.createElement("img");
  image.setAttribute("src",book.image);
  div.appendChild(image);
- 
+bookContainer.appendChild(div);
 })
 })
 
