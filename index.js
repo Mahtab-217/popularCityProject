@@ -40,6 +40,7 @@ bookList.forEach(book=>{
   const p = document.createElement("p");
   p.classList.add("text-base");
   p.classList.add("font-bold");
+
   p.classList.add("text-justify");
   p.textContent = book.desc;
 //  div.appendChild(p);
@@ -48,8 +49,8 @@ bookList.forEach(book=>{
   textContainer.append(h1,p);
  const image=document.createElement("img");
  image.setAttribute("src",book.image);
- image.classList.add("w-11/12")
- image.classList.add("h-62")
+ image.classList.add("w-10/12")
+ image.classList.add("h-80")
  image.classList.add("rounded-md")
  div.appendChild(image);
 bookContainer.appendChild(div);
