@@ -19,7 +19,7 @@ bookList.push(bookInfo);
 // bookDescription="";
   form.classList.remove("flex");
 form.classList.add("hidden"); 
-
+bookContainer.innerHTML="";
 bookList.forEach(book=>{
 
    const div = document.createElement("div");
@@ -46,7 +46,14 @@ bookList.forEach(book=>{
 //  div.appendChild(p);
   const textContainer=document.createElement("div");
   div.appendChild(textContainer);
-  textContainer.append(h1,p);
+const deleteBtn=  document.createElement("button");
+deleteBtn.textContent="Delete";
+deleteBtn.classList.add("py-1.5");
+deleteBtn.classList.add("px-2");
+deleteBtn.classList.add("bg-red-600");
+deleteBtn.classList.add("rounded-md");
+deleteBtn.classList.add("text-white");
+  textContainer.append(h1,p,deleteBtn);
  const image=document.createElement("img");
  image.setAttribute("src",book.image);
  image.classList.add("w-10/12")
